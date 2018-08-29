@@ -54,14 +54,59 @@
     
 
 
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ButterIsClarifiedToCreateClarifiedButter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ButterIsClarifiedToCreateClarifiedButter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#ButterIsUsedToCreateButterfat"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ClarifiedButterIsDerivedByClarifyingButter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#en:Clarified_butter"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ButterIsDerivedFromCream -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ButterIsDerivedFromCream">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isDerivedFrom"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#CreamIsUsedToCreateButter"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Cream"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Cream"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ButterIsSimmerToCreateGhee -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ButterIsSimmerToCreateGhee">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#ButterIsUsedToCreateButterfat"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#GheeIsDerivedBySimmeringButter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#en:Ghee"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ChurnedButterIsDerivedByChurningCream -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ChurnedButterIsDerivedByChurningCream">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ButterIsDerivedFromCream"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Churned_butter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Cream"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ClarifiedButterIsDerivedByClarifyingButter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ClarifiedButterIsDerivedByClarifyingButter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#ButterfatIsDerivedFromButter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#en:Clarified_butter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
     </owl:ObjectProperty>
     
 
@@ -70,9 +115,20 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#CreamIsUsedToCreateButter">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isUsedToCreate"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Cream"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Cream"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#GheeIsDerivedBySimmeringButter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#GheeIsDerivedBySimmeringButter">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#ButterfatIsDerivedFromButter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#en:Ghee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
     </owl:ObjectProperty>
     
 
@@ -81,9 +137,9 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#SaltedButterIsDerivedFromButter">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isDerivedFrom"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Salted_butter"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Salted_butter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
     </owl:ObjectProperty>
     
 
@@ -94,7 +150,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#contains"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#butterfatIsContainedByButter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butterfat"/>
     </owl:ObjectProperty>
     
@@ -106,8 +162,8 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#contains"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#saltIsContainedByButter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Salt"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Salt"/>
     </owl:ObjectProperty>
     
 
@@ -118,7 +174,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isContainedBy"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butterfat"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
     </owl:ObjectProperty>
     
 
@@ -143,7 +199,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isDerivedFrom">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isUsedToCreate"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     </owl:ObjectProperty>
     
 
@@ -151,7 +207,7 @@
     <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isUsedToCreate -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isUsedToCreate">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
     </owl:ObjectProperty>
     
 
@@ -170,8 +226,8 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#ButterIsUsedToCreateButterfat">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isUsedToCreate"/>
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#ButterfatIsDerivedFromButter"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butterfat"/>
     </owl:ObjectProperty>
     
@@ -181,9 +237,9 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#ButterfatIsDerivedFromButter">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isDerivedFrom"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butterfat"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
     </owl:ObjectProperty>
     
 
@@ -252,150 +308,34 @@
     
 
 
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Beurre_de_cuisine -->
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#AOP -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Beurre_de_cuisine">
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#AOP"/>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Cream -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Cream">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
                 <owl:allValuesFrom>
                     <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
                         <owl:withRestrictions rdf:parseType="Collection">
                             <rdf:Description>
-                                <xsd:pattern>fr:[Bb]eure de cuisine</xsd:pattern>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</xsd:maxExclusive>
                             </rdf:Description>
                         </owl:withRestrictions>
                     </rdfs:Datatype>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">95.0</owl:hasValue>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Beurre_demi-sel -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Beurre_demi-sel">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:pattern>fr:[Bb]eure demi-sel</xsd:pattern>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</owl:hasValue>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Butter -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Butter">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:pattern>en:[Bb]utter</xsd:pattern>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</owl:hasValue>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Churned_butter -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Churned_butter">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:pattern>en:[Cc]hurned butter</xsd:pattern>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.4</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</owl:hasValue>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF_Ingredient"/>
     </owl:Class>
     
 
@@ -437,6 +377,12 @@
     
 
 
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Isigny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Isigny"/>
+    
+
+
     <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient">
@@ -445,43 +391,25 @@
     
 
 
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Cream -->
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF_Ingredient -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Cream">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0</xsd:minInclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</xsd:maxExclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF_Ingredient">
+        <rdfs:comment xml:lang="en">An OFF-Ingredient gathers Named-ingredients based on the properties of a Named-ingredient.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Salt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Salt">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF_Ingredient"/>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Salt -->
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Salted_butter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Salt">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF_Ingredient"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Salted_butter -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Salted_butter">
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Salted_butter">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -524,37 +452,30 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#isDerivedFrom"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Salted butter is defined by the percentage of butterfat (&gt;= 80%) AND the amount of salt (&gt;= 5%). Both properties need to be defined, otherwise confusion with normal unsalted butter is possible.</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF_Ingredient -->
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Butter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF_Ingredient">
-        <rdfs:comment xml:lang="en">An OFF-Ingredient gathers Named-ingredients based on the properties of a Named-ingredient.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Salted_butter -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Salted_butter">
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Butter">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
-                <owl:allValuesFrom>
+                <owl:someValuesFrom>
                     <rdfs:Datatype>
                         <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                         <owl:withRestrictions rdf:parseType="Collection">
                             <rdf:Description>
-                                <xsd:pattern>en:[Ss]alted butter</xsd:pattern>
+                                <xsd:pattern>en:[Bb]utter</xsd:pattern>
                             </rdf:Description>
                         </owl:withRestrictions>
                     </rdfs:Datatype>
-                </owl:allValuesFrom>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
@@ -563,35 +484,11 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
-                        <owl:allValuesFrom>
-                            <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                                <owl:withRestrictions rdf:parseType="Collection">
-                                    <rdf:Description>
-                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</xsd:minExclusive>
-                                    </rdf:Description>
-                                    <rdf:Description>
-                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
-                                    </rdf:Description>
-                                </owl:withRestrictions>
-                            </rdfs:Datatype>
-                        </owl:allValuesFrom>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</owl:hasValue>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                        <owl:allValuesFrom>
-                            <rdfs:Datatype>
-                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                                <owl:withRestrictions rdf:parseType="Collection">
-                                    <rdf:Description>
-                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</xsd:minInclusive>
-                                    </rdf:Description>
-                                    <rdf:Description>
-                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.0</xsd:maxExclusive>
-                                    </rdf:Description>
-                                </owl:withRestrictions>
-                            </rdfs:Datatype>
-                        </owl:allValuesFrom>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -600,9 +497,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Unsalted_butter -->
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Churned_butter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Unsalted_butter">
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Churned_butter">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
@@ -611,7 +508,7 @@
                         <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                         <owl:withRestrictions rdf:parseType="Collection">
                             <rdf:Description>
-                                <xsd:pattern>en:[Uu]nsalted butter</xsd:pattern>
+                                <xsd:pattern>en:[Cc]hurned butter</xsd:pattern>
                             </rdf:Description>
                         </owl:withRestrictions>
                     </rdfs:Datatype>
@@ -633,42 +530,11 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Beurre_d&apos;Isigny_AOP -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Beurre_d&apos;Isigny_AOP">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
-                <owl:allValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:pattern>fr:[Bb]eure d&apos;Isigny AOP</xsd:pattern>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</owl:hasValue>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</owl:hasValue>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ChurnedButterIsDerivedByChurningCream"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Cream"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -703,41 +569,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butterfat -->
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Salted_butter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butterfat">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.0</xsd:minInclusive>
-                            </rdf:Description>
-                            <rdf:Description>
-                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF_Ingredient"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#ButterfatIsDerivedFromButter"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Clarified_butter -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Clarified_butter">
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Salted_butter">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
@@ -746,7 +580,7 @@
                         <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                         <owl:withRestrictions rdf:parseType="Collection">
                             <rdf:Description>
-                                <xsd:pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:[Cc]larified [Bb]utter</xsd:pattern>
+                                <xsd:pattern>en:[Ss]alted butter</xsd:pattern>
                             </rdf:Description>
                         </owl:withRestrictions>
                     </rdfs:Datatype>
@@ -755,18 +589,26 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.0</owl:hasValue>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.1</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Concentrated_butter -->
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Unsalted_butter -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Concentrated_butter">
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Unsalted_butter">
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
@@ -775,7 +617,7 @@
                         <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                         <owl:withRestrictions rdf:parseType="Collection">
                             <rdf:Description>
-                                <xsd:pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:[Cc]oncentrated [Bb]utter</xsd:pattern>
+                                <xsd:pattern>en:[Uu]nsalted butter</xsd:pattern>
                             </rdf:Description>
                         </owl:withRestrictions>
                     </rdfs:Datatype>
@@ -784,18 +626,150 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.0</owl:hasValue>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.4</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter -->
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#fr:Beurre_dIsigny_AOP -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#OFF-Butter">
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#fr:Beurre_dIsigny_AOP">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:pattern>fr:[Bb]eure d&apos;Isigny AOP</xsd:pattern>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#AOP"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Isigny"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fr:Beurre d&apos;Isigny AOP is defined by the string &quot;fr:beurre d&apos;Isigny AOP&quot;.
+
+For inference purposes it is defined as an ingredient with 80% butterfat.
+
+To distinguish this ingredient from other similar butterfat ingredients, it has an AOP label and manufaturing origin.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#fr:Beurre_de_cuisine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#fr:Beurre_de_cuisine">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:pattern>fr:[Bb]eure de cuisine</xsd:pattern>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">95.0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#fr:Beurre_demi-sel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#fr:Beurre_demi-sel">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:pattern>fr:[Bb]eure demi-sel</xsd:pattern>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#hasPercentageOfSalt"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</owl:hasValue>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">80.0</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -838,9 +812,75 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ButterIsDerivedFromCream"/>
-                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF-Cream"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Cream"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butterfat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butterfat">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.0</xsd:minInclusive>
+                            </rdf:Description>
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#OFF_Ingredient"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#ButterfatIsDerivedFromButter"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Concentrated_butter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Concentrated_butter">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:[Cc]oncentrated [Bb]utter</xsd:pattern>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:Concentrated butter is defined by the string &quot;en:Concentrated butter&quot;.
+
+For inference purposes it is defined as an ingredient with 99% butterfat.
+
+This ingredient is the industrial term for butterfat.</rdfs:comment>
     </owl:Class>
     
 
@@ -867,9 +907,49 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#en:Clarified_butter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#en:Clarified_butter">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasName"/>
+                <owl:allValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:[Cc]larified [Bb]utter</xsd:pattern>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#ClarifiedButterIsDerivedByClarifyingButter"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.0</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:Clarified butter is defined by the string &quot;en:Clarified butter&quot;.
+
+For inference purposes it is defined as an ingredient with 99% butterfat.
+
+This ingredient makes clear it has been created from butter by some sort of process.</rdfs:comment>
     </owl:Class>
     
 
@@ -895,6 +975,12 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Named_Ingredient"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#GheeIsDerivedBySimmeringButter"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#Butter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#hasPercentageOfButterfat"/>
                 <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#double">99.0</owl:hasValue>
             </owl:Restriction>
@@ -917,7 +1003,7 @@
     <!-- http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Butter -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Butter">
-        <rdf:type rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#Butter"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Butter"/>
         <gheePercentage:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:Butter</gheePercentage:hasName>
     </owl:NamedIndividual>
     
@@ -1040,6 +1126,70 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#en:Ghee">
         <gheePercentage:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:Ghee</gheePercentage:hasName>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Butter">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:Butter is defined by the string &quot;en:Butter&quot;.
+
+For inference purposes it is defined as an ingredient with 80% butterfat and 0.5% salt.
+
+This ingredient is the same as the Defined Ingredient Butter.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Churned_butter">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:Churned butter is defined by the string &quot;en:Churned butter&quot;.
+
+For inference purposes it is defined as an ingredient with 80% butterfat and 0.5% salt.
+
+To distinguish this ingredient from similar ingredients the production method ChurnedButterIsDerivedByChurningCream is added.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Cream">
+        <rdfs:comment xml:lang="en">en:Cream is defined by the string &quot;en:cream&quot;.
+
+For inference purposes it is defined as an ingredient with 10% butterfat.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Salted_butter">
+        <rdfs:comment xml:lang="en">en:Salted butter is defined by the string &quot;en:salted butter&quot;.
+
+For inference purposes it is defined as an ingredient with 3.1% salt and 80% butterfat.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#en:Unsalted_butter">
+        <rdfs:comment xml:lang="en">en:Unsalted butter is defined by the string &quot;en:unsalted butter&quot;.
+
+For inference purposes it is defined as an ingredient with 0.4% salt and 80% butterfat.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#fr:Beurre_de_cuisine">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fr:Beurre de cuisine is defined by the string &quot;fr:Beurre de cuisine&quot;.
+
+For inference purposes it is defined as an ingredient with 95% butterfat and 0.5% salt.
+
+This butterfat percentage and salt percentage is enough to differentiate this ingredient from other ingredients.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/Butterfat#fr:Beurre_demi-sel">
+        <rdfs:comment xml:lang="en">fr:Beurre demi-sel is defined by the string &quot;fr:demi-sel&quot;.
+
+For inference purposes it is defined as an ingredient with 1.0% salt and 80% butterfat. This salt percentage will infer that this is a salted butter.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#en:Butterfat">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ingredient en:Butterfat is defined by the name &quot;en:Butterfat&quot;.
+
+This is the fatty ingredient of Butterfat and is assumed to be pure, i.e 100%.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/arnaud/ontologies/2018/7/gheePercentage#en:Ghee">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en:Ghee is defined by the hasName &quot;en:Ghee&quot;.
+
+For inference purposes it is defined as an ingredient with 99% butterfat.
+
+Ghee differs slightly in its production. The process of creating traditional clarified butter is complete once the water is evaporated and the fat (clarified butter) is separated from the milk solids. However, the production of ghee includes simmering the butter, which makes it nutty-tasting and aromatic. For this an object property has been added</rdfs:comment>
+    </rdf:Description>
 </rdf:RDF>
 
 
